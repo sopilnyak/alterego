@@ -3,7 +3,7 @@ import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import HomeScreen from './screens/HomeScreen';
-import TestScreen from './screens/TestScreen';
+import TaskScreen from './screens/TaskScreen';
 
 const AppNavigator = createBottomTabNavigator(
   {
@@ -14,7 +14,7 @@ const AppNavigator = createBottomTabNavigator(
       },
     },
     Tests: {
-      screen: TestScreen,
+      screen: TaskScreen,
       navigationOptions: {
         title: "Tests",
       },
