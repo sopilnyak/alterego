@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, ScrollView, SafeAreaView} from 'react-native';
+import {StyleSheet, ScrollView, SafeAreaView, AsyncStorage} from 'react-native';
 
 class TestScreen extends React.Component {
   render() {
@@ -14,6 +14,7 @@ class TestScreen extends React.Component {
   }
 
   componentDidMount() {
+    AsyncStorage.clear();
   }
 }
 

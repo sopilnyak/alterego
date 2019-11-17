@@ -3,6 +3,7 @@ import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import HomeScreen from './screens/HomeScreen';
+import TaskScreen from './screens/TaskScreen';
 import TestScreen from './screens/TestScreen';
 
 const AppNavigator = createBottomTabNavigator(
@@ -11,6 +12,12 @@ const AppNavigator = createBottomTabNavigator(
       screen: HomeScreen,
       navigationOptions: {
         title: "Home",
+      },
+    },
+    Photo: {
+      screen: TaskScreen,
+      navigationOptions: {
+        title: "Take a photo",
       },
     },
     Tests: {
@@ -30,6 +37,8 @@ const AppNavigator = createBottomTabNavigator(
         let iconName;
         if (routeName === 'Home') {
           iconName = 'home';
+        } else if (routeName === 'Photo') {
+          iconName = 'camera';
         } else if (routeName === 'Tests') {
           iconName = 'list-alt';
         }
