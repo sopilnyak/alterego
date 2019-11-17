@@ -14,6 +14,15 @@ class TestScreen extends React.Component {
     const chartBadColor = ['rgb(200, 100, 0)', 'rgba(200, 100, 0, 0.2)'];
 
     // нейтральный не берем
+    const pieNames = [
+      'anger',
+      'contempt',
+      'disgust',
+      'fear',
+      'happiness',
+      'sadness',
+      'surprise',
+    ];
     const pieData = [100, 200, 100, 150, 300, 50, 44];
     const pieBlocks = [
       {
@@ -81,6 +90,9 @@ class TestScreen extends React.Component {
       />
     );
 
+    const ArgMax = array =>
+      array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
+
     return (
       <SafeAreaView style={styles.safeArea}>
         <AreaChart
@@ -92,6 +104,14 @@ class TestScreen extends React.Component {
           <Grid />
           <Line />
         </AreaChart>
+        <View
+          style={{
+            backgroundColor: '#f9f9f9',
+            marginBottom: 15,
+            alignItems: 'center',
+          }}>
+          <Text>Status: {isOk ? 'OK' : 'threatened'}</Text>
+        </View>
         <PieChart
           style={{height: 200}}
           valueAccessor={({item}) => item.amount}
@@ -100,6 +120,17 @@ class TestScreen extends React.Component {
           outerRadius={'95%'}>
           <Labels />
         </PieChart>
+        <View
+          style={{
+            backgroundColor: '#f9f9f9',
+            marginBottom: 15,
+            alignItems: 'center',
+          }}>
+          <Text>
+            Most frequent: {pieNames[ArgMax(pieData)]} (
+            {pieData[ArgMax(pieData)]}%)
+          </Text>
+        </View>
         <View
           style={{
             backgroundColor: '#fab900',
