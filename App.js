@@ -21,7 +21,7 @@ const AppNavigator = createBottomTabNavigator(
       },
     },
     Tests: {
-      screen: TestScreen,
+      screen: TaskScreen,
       navigationOptions: {
         title: "Tests",
       },

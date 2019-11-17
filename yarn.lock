@@ -5483,6 +5483,7 @@ react-native-camera@^3.9.0:
   dependencies:
     prop-types "^15.6.2"
 
+<<<<<<< HEAD
 react-native-fs@^2.16.2:
   version "2.16.2"
   resolved "https://registry.yarnpkg.com/react-native-fs/-/react-native-fs-2.16.2.tgz#a312ce5f418e6d91d13b51e50ba0c49b1da1ec79"
@@ -5491,6 +5492,8 @@ react-native-fs@^2.16.2:
     base-64 "^0.1.0"
     utf8 "^3.0.0"
 
+=======
+>>>>>>> 766288b8f92ce190a44f6821f7fa5d99e016394a
 react-native-gesture-handler@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.5.0.tgz#df7dc5285c152e0656db70f55200fa632c4f45af"
