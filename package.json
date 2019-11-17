@@ -17,6 +17,8 @@
     "react-native-invoke-app": "^1.0.4",
     "react-native-navigation": "^3.6.0",
     "react-native-reanimated": "^1.4.0",
+    "react-native-svg": "^9.13.3",
+    "react-native-svg-charts": "^5.3.0",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-navigation-tabs": "^2.5.6"
